@@ -1,0 +1,49 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.MXC_slider {
+  width: 100%;
+}
+ul.MXC_slider_content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+}
+ul.MXC_slider_content li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+img.MXC_img {
+  width: 100%;
+}
+.MXC_slider_main {
+  position: relative;
+  height: 100%;
+}
+.MXC_slider_nav {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  text-align: center;
+  z-index: 10;
+}
+.MXC_slider_nav li {
+  display: inline-block;
+  border-radius: 1em;
+  background: #635A5A;
+  width: 1em;
+  height: 1em;
+  margin: .5em;
+}

@@ -6,7 +6,8 @@ $(function () {
     var MXC_slider_config ={
         'slider_speed':3000, //跳转时间
         'slider_time': 500, //动画时间 单位ms
-        'slider_proportion': 0.390625 //图片宽高比
+        'slider_proportion': 0.390625, //图片宽高比
+        'slider_nav_proportion':0.03125
     };
     var MXC_slider = $(".MXC_slider"),
         MXC_slider_main =$(".MXC_slider_main"),
@@ -15,7 +16,10 @@ $(function () {
 
     //设置基础的字体大小
     var html_width = MXC_slider.width();
-    MXC_slider.css({"font-size":"10px",'height':MXC_slider_config.slider_proportion*html_width+'px'});
+    MXC_slider.css({
+        "font-size":MXC_slider_config.slider_nav_proportion*html_width+"px",
+        'height':MXC_slider_config.slider_proportion*html_width+'px'
+    });
 
     //添加导航
     var MXC_slider_num = $(".MXC_slider_content li") ;
@@ -35,9 +39,8 @@ $(function () {
             'transform':'translate3d(-'+html_width*index+'px,0px,0px)'
         },
             MXC_slider_config.slider_time,
-            'ease-in',
+            'ease-out',
             function () {
-
                 n_index = index % MXC_slider_num.length;
                 console.log(n_index);
                 index+=1;

@@ -36,6 +36,7 @@ $(function () {
     $(MXC_slider_nav[0]).css("background-color",'#ffffff');
     setInterval(function () {
         MXC_slider_content.animate({
+            '-webkit-transform':'translate3d(-'+html_width*index+'px,0px,0px)',
             'transform':'translate3d(-'+html_width*index+'px,0px,0px)'
         },
             MXC_slider_config.slider_time,
